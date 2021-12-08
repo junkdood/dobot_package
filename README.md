@@ -6,13 +6,13 @@ Magician Robotarm
 
 **安装一些重要的依赖包**
 ```sh
-$ sudo apt-get install ros-kinetic-gazebo-ros-control ros-kinetic-ros-control ros-kinetic-ros-controllers
+sudo apt-get install ros-kinetic-gazebo-ros-control ros-kinetic-ros-control ros-kinetic-ros-controllers
 ```
 **安装和升级MoveIt!** 
 
 ```sh
-$ sudo apt-get update
-$ sudo apt-get install ros-kinetic-moveit
+sudo apt-get update
+sudo apt-get install ros-kinetic-moveit
 ```
 
 **安装本软件包**
@@ -23,13 +23,13 @@ $ sudo apt-get install ros-kinetic-moveit
 
 **安装一些重要的依赖包**
 ```sh
-$ sudo apt-get install ros-melodic-gazebo-ros-control ros-melodic-ros-control ros-melodic-ros-controllers
+sudo apt-get install ros-melodic-gazebo-ros-control ros-melodic-ros-control ros-melodic-ros-controllers
 ```
 **安装和升级MoveIt!** 
 
 ```sh
-$ sudo apt-get update
-$ sudo apt-get install ros-melodic-moveit
+sudo apt-get update
+sudo apt-get install ros-melodic-moveit
 ```
 
 **安装本软件包**
@@ -42,17 +42,17 @@ $ sudo apt-get install ros-melodic-moveit
 
 用Gazebo仿真请运行：
 ```sh
-$ roslaunch magician_description gazebo.launch
+roslaunch magician_description gazebo.launch
 ```
 
 运行MoveIt!模块, RViz界面:
 ```sh
-$ roslaunch magician_moveit_config moveit_planning_execution.launch
+roslaunch magician_moveit_config moveit_planning_execution.launch
 ```
 
 运行后台程序及Magician Control Panel界面：
 ```sh
-$ roslaunch magician_background magician_background.launch
+roslaunch magician_background magician_background.launch
 ```
 
 > 关于MoveIt!的使用方法可以参考[docs/moveit_plugin_tutorial.md](docs/moveit_plugin_tutorial.md)  
