@@ -70,7 +70,7 @@ ls /dev/ttyUSB*
 ```
 现假设设备编号是ttyUSB0，运行以下指令来启动驱动：
 ```sh
-sudo chmod 777 /dev/ttyUSB0
+sudo chmod a+rw /dev/ttyUSB0
 roslaunch magician_hardware magician_bringup.launch
 ```
 运行MoveIt!模块和RViz界面:
