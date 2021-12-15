@@ -147,7 +147,7 @@ bool MagicianDevice::ResetPose(std_srvs::SetBool::Request &req, std_srvs::SetBoo
 
 bool MagicianDevice::ReadPose(std::vector<double> &joint_values)
 {
-    /*
+    
     Pose pose;
     int result=GetPose(&pose);
     bool pose_changed=false;
@@ -173,7 +173,7 @@ bool MagicianDevice::ReadPose(std::vector<double> &joint_values)
             joint_offsets_[i]=0;
         }
     }
-    */
+    
 
 //    bool isTriggered;
 //    GetHHTTrigOutput(&isTriggered);
