@@ -59,3 +59,30 @@ roslaunch magician_background magician_background.launch
 Tips:  
 每次规划路径时，都要设置初始位置为当前位置。
 
+### 使用真实机械臂
+将Magician通过USB线连接到电脑。用以下命令可以查到当前电脑连接的USB设备的编号：
+```sh
+ls /dev/ttyUSB*
+```
+本软件包默认的编号是ttyUSB0 。假如当前编号不是0的话，请对magician_hardware/launch/magician_bringup.launch的相应部分进行修改。
+```
+  <node name="magician_hardware" pkg="magician_hardware" type="magician_hardware_node" args="ttyUSB0" output="screen"/>
+```
+现假设设备编号是ttyUSB0，运行以下指令来启动驱动：
+```sh
+sudo chmod 777 /dev/ttyUSB0
+roslaunch magician_hardware magician_bringup.launch
+```
+运行MoveIt!模块和RViz界面:
+```sh
+roslaunch magician_moveit_config moveit_planning_execution.launch
+```
+> 关于MoveIt!的使用方法可以参考[docs/moveit_plugin_tutorial.md](docs/moveit_plugin_tutorial.md)  
+Tips:  
+1.每次规划路径时，都要设置初始位置为当前位置。  
+2.Magician各轴运动角度范围为 J1: [-125°~125°]; J2: [20°~90°]; J3: [35°~90°]。在此范围外时MoveIt!无法进行规划。
+
+运行后台程序及Magician Control Panel界面：
+```sh
+roslaunch magician_background magician_background.launch
+```
