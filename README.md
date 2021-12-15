@@ -86,3 +86,15 @@ Tips:
 ```sh
 roslaunch magician_background magician_background.launch
 ```
+
+
+### problem solved
+
+1. VMware: vmw_ioctl_command error Invalid argument.
+   ```
+   export SVGA_VGPU10=0
+   ```
+   or
+   ```
+   echo "export SVGA_VGPU10=0" >> ~/.profile
+   ```
