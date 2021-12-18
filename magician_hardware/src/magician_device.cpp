@@ -70,8 +70,8 @@ bool MagicianDevice::InitPose()
         return false;
     }
 
-    SetHHTTrigMode(TriggeredOnKeyReleased);
-    SetHHTTrigOutputEnabled(true);
+    // SetHHTTrigMode(TriggeredOnKeyReleased);
+    // SetHHTTrigOutputEnabled(true);
 
     Pose pose;
     int get_pose_times=0;
@@ -150,6 +150,7 @@ bool MagicianDevice::ReadPose(std::vector<double> &joint_values)
     
     Pose pose;
     int result=GetPose(&pose);
+    ROS_INFO("\njointAngle:\n%f\n%f\n%f\n%f\n", pose.jointAngle[0], pose.jointAngle[1], pose.jointAngle[2], pose.jointAngle[3]);
     bool pose_changed=false;
     if(result==DobotCommunicate_NoError)
     {
@@ -183,7 +184,6 @@ bool MagicianDevice::ReadPose(std::vector<double> &joint_values)
     {
         joint_values[i]=joint_bases_[i]+joint_offsets_[i];
     }
-
     return true;
 }
 

@@ -46,12 +46,9 @@ Created on Thurs June 19 16:31 2019
 
 namespace magician_hardware {
 
-// const double RAD_PER_PULSE=M_PI_2/8000;
-// const double PULSE_PER_RAD=8000/M_PI_2;
-// const double RAD_PER_DEGREE=M_PI/180;
-const double RAD_PER_PULSE=360/8000;
-const double PULSE_PER_RAD=8000/360;
-const double RAD_PER_DEGREE=180/180;
+const double RAD_PER_PULSE=M_PI_2/8000;
+const double PULSE_PER_RAD=8000/M_PI_2;
+const double RAD_PER_DEGREE=M_PI/180;
 
 class MagicianDevice {
 public:
