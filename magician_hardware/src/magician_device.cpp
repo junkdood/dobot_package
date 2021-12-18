@@ -150,7 +150,7 @@ bool MagicianDevice::ReadPose(std::vector<double> &joint_values)
     
     Pose pose;
     int result=GetPose(&pose);
-    ROS_INFO("\njointAngle:\n%f\n%f\n%f\n%f\n", pose.jointAngle[0], pose.jointAngle[1], pose.jointAngle[2], pose.jointAngle[3]);
+    
     bool pose_changed=false;
     if(result==DobotCommunicate_NoError)
     {
@@ -174,7 +174,7 @@ bool MagicianDevice::ReadPose(std::vector<double> &joint_values)
             joint_offsets_[i]=0;
         }
     }
-    
+    // ROS_INFO("\njointAngle:\n%f\n%f\n%f\n%f\n", joint_offsets_[0], joint_offsets_[1], joint_offsets_[2], joint_offsets_[3]);
 
 //    bool isTriggered;
 //    GetHHTTrigOutput(&isTriggered);
@@ -205,7 +205,7 @@ bool MagicianDevice::WritePose(const std::vector<double> &joint_cmds)
     {
         pulses[i]=0;
     }
-
+    // ROS_INFO("\nData:\n%f\n%f\n%f\n%f\n%f\n%f\n", pulses[0], pulses[1], pulses[2], pulses[3], pulses[4], pulses[5]);
     PluseCmd cmd;
     cmd.j1=pulses[0];
     cmd.j2=pulses[1];

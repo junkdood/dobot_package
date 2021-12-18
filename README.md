@@ -59,7 +59,7 @@ roslaunch magician_background magician_background.launch
 Tips:  
 每次规划路径时，都要设置初始位置为当前位置。
 
-### 使用真实机械臂
+### 使用真实机械臂(有问题，调用了SendPluse()，官方文档没介绍，而且不能控制)
 将Magician通过USB线连接到电脑。用以下命令可以查到当前电脑连接的USB设备的编号：
 ```sh
 ls /dev/ttyUSB*
